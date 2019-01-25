@@ -30,8 +30,8 @@ public class TestAPI {
         try {
             this.response = this.api.sendGet("https://news.google.com/?hl=en-US&gl=US&ceid=US:en");
             Assert.assertEquals(this.response.getResponseCode(), 200);
-        } catch (Exception var2) {
-            var2.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
     }
@@ -44,8 +44,8 @@ public class TestAPI {
             this.response = this.api.sendPost("https://selfsolve.apple.com/wcResults.do");
 
             assert this.response.getResponseCode() == 200;
-        } catch (Exception var2) {
-            var2.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
     }
@@ -57,8 +57,8 @@ public class TestAPI {
         try {
             this.response = this.api.sendGet("https://news.google.com/?hl=en-US&gl=US&ceid=US:en");
             Assert.assertTrue(this.response.getContent().toString().contains("sun.net.www.protocol.http"));
-        } catch (Exception var2) {
-            var2.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
     }
@@ -70,8 +70,8 @@ public class TestAPI {
         try {
             this.response = this.api.sendPost("https://selfsolve.apple.com/wcResults.do");
             Assert.assertEquals(this.response.getResponseMessage(), "OK");
-        } catch (Exception var2) {
-            var2.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
     }
@@ -83,8 +83,8 @@ public class TestAPI {
         try {
             this.response = this.api.sendPost("https://selfsolve.apple.com/wcResults.do");
             Assert.assertFalse(this.response.usingProxy());
-        } catch (Exception var2) {
-            var2.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
     }
